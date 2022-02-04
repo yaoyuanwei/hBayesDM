@@ -1,0 +1,32 @@
+task_name:
+  code: edt
+  desc: Effort Decision Task
+  cite:
+model_name:
+  code: parab
+  desc: Parabolic Model
+  cite:
+  - Chong T. T. (2017). Neurocomputational mechanisms underlying subjective valuation of effort costs.
+model_type:
+  code:
+  desc: Hierarchical
+notes:
+contributors:
+data_columns:
+  subjID: A unique identifier for each subject in the data-set.
+  cost_one: Cost for option one (e.g. 1, 3).
+  amount_one: Reward for option one (e.g. 2, 4).
+  cost_two: Cost for option two (e.g. 1, 3).
+  amount_two: Reward for option two (e.g. 2, 4).
+  choice: If option one was selected, choice == 1; else choice == 0.
+parameters:
+  k:
+    desc: discounting rate
+    info: [0, 0.1, 1]
+  beta:
+    desc: inverse temperature
+    info: [0, 1, 5]
+regressors:
+postpreds:
+- y_pred
+additional_args:
